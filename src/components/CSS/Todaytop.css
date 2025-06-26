@@ -1,0 +1,60 @@
+main.today .section {
+   box-sizing: border-box;
+   height: 465px;
+   padding: 75px 100px;
+   margin-top: 35px;
+   background-color: #c2d8db;
+   border-radius: 20px;
+}
+
+main.today .section > div {
+   box-sizing: border-box;
+   width: 1140px;
+   padding: 20px 0;
+   border-radius: 20px;
+}
+
+main.today .section div h1 {
+   font-size: 20px;
+   font-weight: 500;
+   color: #505252;
+}
+
+main.today .render {
+   display: flex;
+   justify-content: space-between;
+   margin: 55px 0 50px;
+}
+
+main.today .weather-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 725px;
+}
+
+main.today .description {
+   display: flex;
+   align-items: center;
+   width: 350px;
+}
+
+main.today .weather-info div span {
+   display: inline-block;
+   font-size: 50px;
+   text-align: center;
+}
+
+main.today .air-info {
+   display: flex;
+   width: 370px;
+}
+
+main.today .air-info .aqi {
+   width: 185px;
+   text-align: center;
+}
+
+main.today .aqi p {
+   font-size: 30px;
+}

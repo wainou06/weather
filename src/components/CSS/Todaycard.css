@@ -1,0 +1,22 @@
+.weather-cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    box-sizing: border-box;
+    background-color: #D9D9D9;
+    width: 285px;
+    height: 135px;
+    padding: 20px;
+}
+
+.card h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card p {
+    font-size: 40px;
+    margin-top: 15px;
+}

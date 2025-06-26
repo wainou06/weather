@@ -1,0 +1,21 @@
+.suntime {
+   display: flex;
+   justify-content: space-between;
+   align-items: end;
+}
+
+.suntime .half {
+   position: relative;
+   overflow: hidden;
+   width: 305px;
+   height: 150px;
+}
+
+.suntime .half div {
+   position: absolute;
+}
+
+.suntime p {
+   font-size: 23px;
+   text-align: center;
+}

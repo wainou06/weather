@@ -1,0 +1,39 @@
+.event {
+   box-sizing: border-box;
+   background-color: #c9cdd1;
+   height: 630px;
+   border-radius: 20px;
+   padding: 55px;
+}
+
+.event h2 {
+   font-weight: 500;
+   padding-bottom: 40px;
+}
+
+.event .mySwiper {
+   height: 440px;
+}
+
+.event .swiper-wrapper .swiper-slide {
+   background-color: #d9d9d9;
+}
+
+.event .swiper-wrapper .swiper-slide > div {
+   height: 390px;
+   background-image: url('https://picsum.photos/300/500');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+   color: white;
+}
+
+.event .swiper-wrapper .swiper-slide p {
+   padding: 10px 0;
+   font-size: 20px;
+   text-align: center;
+}

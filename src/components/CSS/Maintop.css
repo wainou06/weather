@@ -1,0 +1,56 @@
+main.home .background {
+   box-sizing: border-box;
+   height: 515px;
+   background-image: url('/images/배경.jpg');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 75px 100px;
+}
+
+main.home .background > div {
+   box-sizing: border-box;
+   background-color: #fff;
+   width: 505px;
+   padding: 20px;
+   border-radius: 20px;
+}
+
+main.home .background div h1 {
+   font-size: 20px;
+   font-weight: 500;
+   color: #505252;
+}
+
+main.home .render {
+   display: flex;
+   justify-content: space-between;
+}
+
+main.home .weather-info {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 295px;
+}
+
+main.home .weather-info > div {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   justify-content: center;
+}
+
+main.home .air-info {
+   display: flex;
+   width: 150px;
+}
+
+main.home .air-info .aqi {
+   width: 75px;
+   text-align: center;
+}
+
+main.home .aqi p {
+   font-size: 14px;
+}

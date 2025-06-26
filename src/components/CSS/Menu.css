@@ -1,0 +1,77 @@
+.header_top {
+   display: flex;
+   justify-content: space-between;
+   height: 100px;
+   align-items: center;
+   background-color: #f3f6f5;
+   padding: 0 100px;
+}
+
+.header_top ul {
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 308px;
+}
+
+div.MuiFormControl-root {
+   margin-right: 0;
+}
+
+label.MuiFormLabel-root {
+   display: flex;
+   align-items: center;
+   color: #000;
+}
+
+.header_menu {
+   display: flex;
+   justify-content: space-between;
+   height: 100px;
+   align-items: center;
+   background-color: #c9cdd1;
+   padding: 0 100px;
+}
+
+.menu_list {
+   list-style: none;
+   display: flex;
+   width: 610px;
+   justify-content: space-between;
+}
+
+.menu_list a {
+   text-decoration: none;
+   color: #000;
+   font-weight: bold;
+   font-size: 20px;
+}
+
+.search {
+   display: flex;
+}
+
+.search input {
+   box-sizing: border-box;
+   width: 421px;
+   height: 45px;
+   padding: 10px 20px;
+   border: 1px solid #2d2b6f;
+   border-radius: 20px 0 0 20px;
+   background-color: #f3f6f5;
+   color: #505252;
+   font-size: 15px;
+}
+
+.search button {
+   width: 65px;
+   height: 45px;
+   background-color: #2d2b6f;
+   border: none;
+   border-radius: 0 20px 20px 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+}

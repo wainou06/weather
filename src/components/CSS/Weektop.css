@@ -1,0 +1,46 @@
+main.week .weektop-section {
+   box-sizing: border-box;
+   padding: 50px;
+   margin-top: 35px;
+   background-color: #2d2b6f;
+   border-radius: 20px;
+}
+
+main.week .week-weather {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+main.week .week-weather .day-card {
+   box-sizing: border-box;
+   width: 585px;
+   background-color: #f3f6f5;
+   border-radius: 20px;
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 20px;
+}
+
+main.week .week-weather .day-card:last-child {
+   margin-bottom: 0;
+}
+
+main.week .week-weather > div:first-child {
+    background-color: #C2D8DB;
+}
+
+main.week .week-weather > div:nth-child(2) {
+    background-color: #C2D8DB;
+}
+
+main.week .day-card div:first-child {
+   align-self: start;
+   font-size: 25px;
+}
+
+main.week .day-card > p {
+   font-size: 30px;
+}
