@@ -73,9 +73,11 @@ function Menu() {
                </ul>
                <div className="search">
                   <input type="text" placeholder="다른 지역 날씨 검색하기" />
-                  <button>
-                     <SearchIcon style={{ color: '#fff', fontSize: '30px' }} />
-                  </button>
+                  <NavLink to="/*">
+                     <button>
+                        <SearchIcon style={{ color: '#fff', fontSize: '30px' }} />
+                     </button>
+                  </NavLink>
                </div>
             </div>
          </nav>
