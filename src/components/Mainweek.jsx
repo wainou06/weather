@@ -26,7 +26,7 @@ function Mainweek() {
    // 이번주 날씨
    const renderWeekWeather = () => {
       if (loadingweek || !weekend) return <p>날씨 불러오는 중...</p>
-      if (errorweek) return <p>날씨 오류: {error}</p>
+      if (errorweek) return <p>날씨 오류: {errorweek}</p>
 
       const dailyData = weekend.list.filter((item) => item.dt_txt.includes('12:00:00'))
       return (

@@ -38,7 +38,7 @@ const weatherSlice = createSlice({
    reducers: {},
    extraReducers: (builder) => {
       builder
-         .addCase(fetchTodayWeather.pending, (state, action) => {
+         .addCase(fetchTodayWeather.pending, (state) => {
             state.loadingtoday = true
             state.errortoday = null
          })
@@ -50,7 +50,7 @@ const weatherSlice = createSlice({
             state.loadingtoday = false
             state.errortoday = action.error.message
          })
-         .addCase(fetchWeekWeather.pending, (state, action) => {
+         .addCase(fetchWeekWeather.pending, (state) => {
             state.loadingweek = true
             state.errorweek = null
          })

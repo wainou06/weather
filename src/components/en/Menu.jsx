@@ -1,4 +1,4 @@
-import './CSS/Menu.css'
+import '../CSS/Menu.css'
 import { NavLink } from 'react-router-dom'
 
 //mui
@@ -12,7 +12,7 @@ import LanguageIcon from '@mui/icons-material/Language'
 import SearchIcon from '@mui/icons-material/Search'
 
 //Styled
-import { List } from '../styles/StyledComponents'
+import { List } from '../../styles/StyledComponents'
 
 function Menu() {
    //mui
@@ -62,8 +62,11 @@ function Menu() {
                   <img src="/images/로고.png" alt="인천광역시 로고" width="318" height="90" />
                </NavLink>
                <ul>
-                  <li>로그인</li>
-                  <li>회원가입</li>
+                  <li>Login</li>
+                  <li>
+                     Create <br />
+                     an Account
+                  </li>
                   <li>
                      <FormControl sx={{ m: 1, minWidth: 158 }} size="small">
                         <InputLabel id="demo-select-small-label">
@@ -84,27 +87,27 @@ function Menu() {
                <ul className="menu_list">
                   <li>
                      <NavLink to="/today">
-                        <List>오늘의 날씨</List>
+                        <List>Today's weather</List>
                      </NavLink>
                   </li>
                   <li>
                      <NavLink to="/">
-                        <List>오늘의 공기</List>
+                        <List>Today's air</List>
                      </NavLink>
                   </li>
                   <li>
                      <NavLink to="/week">
-                        <List>이번주 날씨</List>
+                        <List>This week's weather</List>
                      </NavLink>
                   </li>
                   <li>
                      <NavLink to="/*">
-                        <List>지금 볼만한 이벤트</List>
+                        <List>Event</List>
                      </NavLink>
                   </li>
                </ul>
                <div className="search">
-                  <input type="text" placeholder="다른 지역 날씨 검색하기(도시 영문자로 검색해주세요.)" value={city} onChange={handleInputChange} />
+                  <input type="text" placeholder="Search for weather in other areas (please search in English for city)" value={city} onChange={handleInputChange} />
 
                   <button onClick={handleSearch}>
                      <SearchIcon style={{ color: '#fff', fontSize: '30px' }} />

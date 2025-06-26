@@ -1,8 +1,8 @@
-import './CSS/Maintop.css'
+import '../CSS/Maintop.css'
 
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchTodayWeather, fetchAirQuality } from '../features/weatherSlice'
+import { fetchTodayWeather, fetchAirQuality } from '../../features/weatherSlice'
 
 function Maintop() {
    const dispatch = useDispatch()
@@ -16,8 +16,8 @@ function Maintop() {
 
    // 오늘 날씨
    const renderWeather = () => {
-      if (loading || !todays) return <p>날씨 불러오는 중...</p>
-      if (error) return <p>날씨 오류: {error}</p>
+      if (loading || !todays) return <p>LOADING...</p>
+      if (error) return <p>Error: {error}</p>
 
       const { weather, main } = todays
       const description = weather[0]?.description
@@ -29,7 +29,6 @@ function Maintop() {
          <div className="weather-info">
             <div style={{ width: 100 }}>
                <img src={iconUrl} alt={description} />
-               <p>{description}</p>
             </div>
             <p style={{ fontSize: '50px' }}>{temp.toFixed(1)}℃</p>
          </div>
@@ -38,18 +37,18 @@ function Maintop() {
 
    // 대기질
    const renderAirQuality = () => {
-      if (loadingAir || !air) return <p>대기질 불러오는 중...</p>
-      if (errorAir) return <p>대기질 오류: {errorAir}</p>
+      if (loadingAir || !air) return <p>LOADING...</p>
+      if (errorAir) return <p>Error: {errorAir}</p>
 
       const pm10 = air.list?.[0]?.components?.pm10
       const pm25 = air.list?.[0]?.components?.pm2_5
 
       const aqiText = {
-         1: '좋음',
-         2: '보통',
-         3: '나쁨',
-         4: '매우 나쁨',
-         5: '위험',
+         1: 'GOOD',
+         2: 'In general',
+         3: 'Bad',
+         4: 'Vary bad',
+         5: 'Dangers',
       }
 
       const aqiIcon = {
@@ -74,12 +73,12 @@ function Maintop() {
       return (
          <div className="air-info">
             <div className="aqi">
-               <p>미세먼지</p>
+               <p>PM10</p>
                <p style={{ fontSize: '45px', height: '70px' }}>{aqiIcon[pm10Level] || '❓'}</p>
                <p>{aqiText[pm10Level] || '❓'}</p>
             </div>
             <div className="aqi">
-               <p>초미세먼지</p>
+               <p>PM2.5</p>
                <p style={{ fontSize: '45px', height: '70px' }}>{aqiIcon[pm25Level] || '❓'}</p>
                <p>{aqiText[pm25Level] || '❓'}</p>
             </div>
@@ -90,7 +89,7 @@ function Maintop() {
    return (
       <div className="background">
          <div>
-            <h1>지금, 인천은</h1>
+            <h1>Now, Incheon</h1>
             <div className="render">
                {renderWeather()}
                {renderAirQuality()}

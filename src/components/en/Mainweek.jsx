@@ -1,10 +1,20 @@
-import './CSS/Weektop.css'
+import '../CSS/Mainweek.css'
 
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchWeekWeather } from '../features/weatherSlice'
+import { fetchWeekWeather } from '../../features/weatherSlice'
 
-function Weektop() {
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/scrollbar'
+
+// import required modules
+import { Scrollbar } from 'swiper/modules'
+
+function Mainweek() {
    const dispatch = useDispatch()
 
    const { weekend, loadingweek, errorweek } = useSelector((state) => state.weathers)
@@ -20,10 +30,18 @@ function Weektop() {
 
       const dailyData = weekend.list.filter((item) => item.dt_txt.includes('12:00:00'))
       return (
-         <div className="week-weather">
+         <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            scrollbar={{
+               hide: true,
+            }}
+            modules={[Scrollbar]}
+            className="week-weather"
+         >
             {dailyData.map((day, index) => {
                const date = new Date(day.dt_txt)
-               const weekday = date.toLocaleDateString('ko-KR', { weekday: 'short' })
+               const weekday = date.toLocaleDateString('en-US', { weekday: 'short' })
                const month = date.getMonth() + 1
                const dayNum = date.getDate()
                const dateLabel = `${month}.${dayNum}.`
@@ -33,7 +51,7 @@ function Weektop() {
                const description = day.weather[0].description
 
                return (
-                  <div className="day-card" key={index}>
+                  <SwiperSlide className="day-card" key={index}>
                      <div>
                         <p>{weekday}</p>
                         <p>{dateLabel}</p>
@@ -42,20 +60,19 @@ function Weektop() {
                         <img src={iconUrl} alt={description} />
                      </div>
                      <p>{temp}℃</p>
-                     <p>{description}</p>
-                  </div>
+                  </SwiperSlide>
                )
             })}
-         </div>
+         </Swiper>
       )
    }
 
    return (
-      <div className="weektop-section">
-         <h2 style={{ color: 'white', fontWeight: '500', paddingBottom: '40px' }}>이번 주, 인천은</h2>
+      <div className="week-section">
+         <h2 style={{ color: '#505252', fontWeight: '500', paddingBottom: '40px' }}>This week, Incheon</h2>
          {renderWeekWeather()}
       </div>
    )
 }
 
-export default Weektop
+export default Mainweek

@@ -17,7 +17,7 @@ function Todaytop() {
    // 오늘 날씨
    const renderWeather = () => {
       if (loadingtoday || !todays) return <p>날씨 불러오는 중...</p>
-      if (errortoday) return <p>날씨 오류: {error}</p>
+      if (errortoday) return <p>날씨 오류: {errortoday}</p>
 
       const { weather, main } = todays
       const description = weather[0]?.description
@@ -41,7 +41,6 @@ function Todaytop() {
       if (loadingAir || !air) return <p>대기질 불러오는 중...</p>
       if (errorAir) return <p>대기질 오류: {errorAir}</p>
 
-      const aqi = air.list?.[0]?.main?.aqi
       const pm10 = air.list?.[0]?.components?.pm10
       const pm25 = air.list?.[0]?.components?.pm2_5
 
