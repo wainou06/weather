@@ -1,0 +1,25 @@
+.eventwrap .festival {
+   background-color: antiquewhite;
+   border-radius: 20px;
+   margin-top: 35px;
+}
+
+.eventwrap .event {
+   background-color: blue;
+   border-radius: 20px;
+}
+
+.eventwrap .fair {
+   background-color: cadetblue;
+   border-radius: 20px;
+}
+
+.eventwrap .art {
+   background-color: darkgoldenrod;
+   border-radius: 20px;
+}
+
+.eventwrap .performance {
+   background-color: firebrick;
+   border-radius: 20px;
+}

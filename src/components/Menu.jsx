@@ -98,7 +98,7 @@ function Menu() {
                      </NavLink>
                   </li>
                   <li>
-                     <NavLink to="/*">
+                     <NavLink to="/event">
                         <List>지금 볼만한 이벤트</List>
                      </NavLink>
                   </li>

@@ -6,6 +6,7 @@ import Week from './pages/Week'
 import NotFound from './pages/NotFound'
 import SearchWeather from './components/SearchWeather'
 import HomeEn from './pages/HomeEn'
+import Event from './pages/Event'
 
 function App() {
    return (
@@ -16,6 +17,7 @@ function App() {
          <Route path="/*" element={<NotFound />}></Route>
          <Route path="/weather" element={<SearchWeather />}></Route>
          <Route path="/en" element={<HomeEn />}></Route>
+         <Route path="/event" element={<Event />}></Route>
       </Routes>
    )
 }
