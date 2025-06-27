@@ -41,8 +41,6 @@ const eventlist = {
    ],
 }
 
-console.log(eventlist)
-
 function isOngoing(dateRange) {
    const [startStr, endStr] = dateRange.split(' ~ ')
    const today = new Date()
@@ -68,9 +66,9 @@ const Card = ({ name, date, place }) => {
          <div className="poster">
             <div className={`${ongoing === '행사 중' ? 'ing' : 'not'}`}>{ongoing}</div>
          </div>
-         <h3 className="text-lg font-semibold">{name}</h3>
-         <p className="text-sm text-gray-600">{date}</p>
-         {place && <p className="text-sm text-gray-500 mt-1">장소: {place}</p>}
+         <h3>{name}</h3>
+         <p>{date}</p>
+         {place && <p>장소: {place}</p>}
       </div>
    )
 }
