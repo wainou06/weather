@@ -1,25 +1,91 @@
-.eventwrap .festival {
-   background-color: antiquewhite;
-   border-radius: 20px;
-   margin-top: 35px;
+.eventwrap {
+   width: 1320px;
+   margin: 0 auto;
 }
 
-.eventwrap .event {
-   background-color: blue;
+.eventwrap .Festival {
+   box-sizing: border-box;
+   background-color: #2d2b6f;
    border-radius: 20px;
+   margin: 35px 0;
+   padding: 55px;
+   height: 630px;
 }
 
-.eventwrap .fair {
-   background-color: cadetblue;
-   border-radius: 20px;
+.eventwrap .Festival h2,
+.eventwrap .Festival h3,
+.eventwrap .Festival p {
+   color: #fff;
 }
 
-.eventwrap .art {
-   background-color: darkgoldenrod;
+.eventwrap .Event {
+   box-sizing: border-box;
+   background-color: #c2d8db;
    border-radius: 20px;
+   margin: 35px 0;
+   padding: 55px;
+   height: 630px;
 }
 
-.eventwrap .performance {
-   background-color: firebrick;
+.eventwrap .Fair {
+   box-sizing: border-box;
+   background-color: #d3643f;
    border-radius: 20px;
+   margin-bottom: 35px;
+   padding: 55px;
+   height: 630px;
+}
+
+.eventwrap .Fair h2,
+.eventwrap .Fair h3,
+.eventwrap .Fair p {
+   color: #fff;
+}
+
+.eventwrap .Art {
+   box-sizing: border-box;
+   background-color: #c1b5a7;
+   border-radius: 20px;
+   margin-bottom: 35px;
+   padding: 55px;
+   height: 650px;
+}
+
+.Art .swiper-pagination-bullet-active {
+   background-color: #7c3123;
+}
+
+.eventwrap .Performance {
+   box-sizing: border-box;
+   background-color: #c9cdd1;
+   border-radius: 20px;
+   margin-bottom: 70px;
+   padding: 55px;
+   height: 630px;
+}
+
+.eventcard {
+   height: 500px;
+}
+
+.Art .eventcard {
+    height: 515px;
+}
+
+.eventcard .poster {
+   height: 400px;
+   background-image: url('https://picsum.photos/300/500');
+   padding: 10px;
+}
+
+.poster .ing,
+.not {
+   padding: 15px;
+   background-color: #c9cdd1;
+   border-radius: 30px;
+   width: 45px;
+   height: 10px;
+   font-size: 14px;
+   line-height: 10px;
+   text-align: center;
 }
